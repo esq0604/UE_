@@ -23,5 +23,11 @@ void AMovingPlatform::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
+	FVector CurLocation = GetActorLocation();
+
+	CurLocation.X = CurLocation.X + 1;
+
+	SetActorLocation(CurLocation);
+
 }
 
