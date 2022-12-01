@@ -16,6 +16,11 @@ void AMovingPlatform::BeginPlay()
 {
 	Super::BeginPlay();
 	
+	StartLocation = GetActorLocation(); 
+
+
+	FString Name = GetName();
+	UE_LOG(LogTemp, Display, TEXT("BeginPlay : %s"), *Name); //C에서 따온것 %f, %d -> Vector와 같은것은 안댐 
 }
 
 // Called every frame
@@ -23,11 +28,47 @@ void AMovingPlatform::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
-	FVector CurLocation = GetActorLocation();
+	MovePlatform(DeltaTime);
+	RotatePlatform(DeltaTime);
+}
 
-	CurLocation.X = CurLocation.X + 1;
+void AMovingPlatform::MovePlatform(float DeltaTime)
+{
+	
 
-	SetActorLocation(CurLocation);
+	if (ShouldPlatformReturn())
+	{
+		FVector MoveDirection = PlatformVelocity.GetSafeNormal(); //GetSafeNormal 실제로 벡터를 수정하지않고, 새 벡터가 포함된 값을 반환 ->const 
+		StartLocation = StartLocation + MoveDirection * MovedDistance;
+		SetActorLocation(StartLocation);
+		PlatformVelocity = -PlatformVelocity;
+	}
+	else
+	{
+		FVector CurLocation = GetActorLocation(); 
+		CurLocation = CurLocation + (PlatformVelocity * DeltaTime);
+		SetActorLocation(CurLocation);
+	}
 
+
+
+	
+}
+
+void AMovingPlatform::RotatePlatform(float DeltaTime)
+{
+	FRotator CurrentRocation = GetActorRotation();
+
+	AddActorLocalRotation(RotationVelocity * DeltaTime);
+}
+
+bool AMovingPlatform::ShouldPlatformReturn() const
+{
+	return GetDistanceMoved() > MovedDistance;
+}
+
+float AMovingPlatform::GetDistanceMoved() const
+{
+	return FVector::Dist(StartLocation, GetActorLocation());
 }
 
