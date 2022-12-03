@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "Components/SceneComponent.h"
+#include "PhysicsEngine/PhysicsHandleComponent.h"
 #include "Grabber.generated.h"
 
 
@@ -24,5 +25,23 @@ public:
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
-		
+
+public:
+	UFUNCTION(BlueprintCallable) // UPROPERTY, UFUCTION .. 블루프린트에서 표시하기 위함 
+		void Release();
+
+	UFUNCTION(BlueprintCallable)
+		void Grab();
+private:
+	UPROPERTY(EditAnywhere)
+		float MaxGrapDistance = 400;
+
+	UPROPERTY(EditAnywhere)
+		float GrabRadius ;
+
+	UPROPERTY(EditAnywhere)
+		float HoldDistance = 200;
+
+	UPhysicsHandleComponent* GetPhysiscsHandle() const;
+	bool GetGrabbableInReach(FHitResult& OutHitResult) const;
 };
