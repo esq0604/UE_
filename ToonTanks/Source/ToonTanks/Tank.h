@@ -21,15 +21,22 @@ public:
 
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
+
 protected:
 	// Called when the game starts or when spawned
+	virtual void BeginPlay() override;
 
 private:
 	void Move(float Value);
+	void Turn(float Value);
 
 private:
 	UPROPERTY(VisibleAnywhere, Category = "Component")
 	USpringArmComponent* SpringArm;
 	UPROPERTY(VisibleAnywhere, Category = "Component")
 	UCameraComponent* Camera;
+	UPROPERTY(EditAnywhere, Category = "Move")
+		float Speed=200;
+	UPROPERTY(EditAnywhere, Category = "Move")
+		float TrunRate = 45.f;
 };
