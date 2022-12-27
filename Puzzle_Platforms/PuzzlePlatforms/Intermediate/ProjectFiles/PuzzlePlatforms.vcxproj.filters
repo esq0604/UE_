@@ -29,9 +29,27 @@
     <None Include="..\..\Config\DefaultInput.ini">
       <Filter>Config</Filter>
     </None>
+    <Filter Include="Config\HoloLens">
+      <UniqueIdentifier>{4C8DD267-CDE7-336F-8602-F5F485D22BAB}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\HoloLens\HoloLensEngine.ini">
+      <Filter>Config\HoloLens</Filter>
+    </None>
     <Filter Include="Source\PuzzlePlatforms">
       <UniqueIdentifier>{BF82F019-D266-34F4-91BF-6C6FA322F30E}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\PuzzlePlatforms\MovingPlatform.cpp">
+      <Filter>Source\PuzzlePlatforms</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\PuzzlePlatforms\MovingPlatform.h">
+      <Filter>Source\PuzzlePlatforms</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\PuzzlePlatforms\PlatformTrigger.cpp">
+      <Filter>Source\PuzzlePlatforms</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\PuzzlePlatforms\PlatformTrigger.h">
+      <Filter>Source\PuzzlePlatforms</Filter>
+    </ClInclude>
     <None Include="..\..\Source\PuzzlePlatforms\PuzzlePlatforms.Build.cs">
       <Filter>Source\PuzzlePlatforms</Filter>
     </None>
@@ -45,6 +63,12 @@
       <Filter>Source\PuzzlePlatforms</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\PuzzlePlatforms\PuzzlePlatformsCharacter.h">
+      <Filter>Source\PuzzlePlatforms</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\PuzzlePlatforms\PuzzlePlatformsGameInstance.cpp">
+      <Filter>Source\PuzzlePlatforms</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\PuzzlePlatforms\PuzzlePlatformsGameInstance.h">
       <Filter>Source\PuzzlePlatforms</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\PuzzlePlatforms\PuzzlePlatformsGameMode.cpp">

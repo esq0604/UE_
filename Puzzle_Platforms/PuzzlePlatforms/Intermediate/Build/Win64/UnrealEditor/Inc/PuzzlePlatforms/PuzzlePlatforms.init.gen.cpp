@@ -17,13 +17,13 @@ void EmptyLinkFunctionForGeneratedCodePuzzlePlatforms_init() {}
 				nullptr,
 				0,
 				PKG_CompiledIn | 0x00000000,
-				0x59420D82,
-				0x20DADCC1,
+				0x54D37F11,
+				0xDAB3FB8F,
 				METADATA_PARAMS(nullptr, 0)
 			};
 			UECodeGen_Private::ConstructUPackage(Z_Registration_Info_UPackage__Script_PuzzlePlatforms.OuterSingleton, PackageParams);
 		}
 		return Z_Registration_Info_UPackage__Script_PuzzlePlatforms.OuterSingleton;
 	}
-	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_PuzzlePlatforms(Z_Construct_UPackage__Script_PuzzlePlatforms, TEXT("/Script/PuzzlePlatforms"), Z_Registration_Info_UPackage__Script_PuzzlePlatforms, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0x59420D82, 0x20DADCC1));
+	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_PuzzlePlatforms(Z_Construct_UPackage__Script_PuzzlePlatforms, TEXT("/Script/PuzzlePlatforms"), Z_Registration_Info_UPackage__Script_PuzzlePlatforms, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0x54D37F11, 0xDAB3FB8F));
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
