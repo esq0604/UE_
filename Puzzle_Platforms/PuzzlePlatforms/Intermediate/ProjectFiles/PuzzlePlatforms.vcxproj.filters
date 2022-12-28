@@ -11,6 +11,7 @@
     <None Include="..\..\Source\PuzzlePlatformsEditor.Target.cs">
       <Filter>Source</Filter>
     </None>
+    <None Include="..\..\.claudiaideconfig" />
     <Filter Include="Config">
       <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
     </Filter>
@@ -76,6 +77,15 @@
     </ClCompile>
     <ClInclude Include="..\..\Source\PuzzlePlatforms\PuzzlePlatformsGameMode.h">
       <Filter>Source\PuzzlePlatforms</Filter>
+    </ClInclude>
+    <Filter Include="Source\PuzzlePlatforms\MenuSystem">
+      <UniqueIdentifier>{36B3355B-A633-3660-A806-B6A02ED6EDA5}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\PuzzlePlatforms\MenuSystem\MainMenu.cpp">
+      <Filter>Source\PuzzlePlatforms\MenuSystem</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\PuzzlePlatforms\MenuSystem\MainMenu.h">
+      <Filter>Source\PuzzlePlatforms\MenuSystem</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

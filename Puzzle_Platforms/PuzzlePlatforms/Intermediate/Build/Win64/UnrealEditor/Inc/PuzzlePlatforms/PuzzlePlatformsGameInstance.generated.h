@@ -17,13 +17,15 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define FID_PuzzlePlatforms_Source_PuzzlePlatforms_PuzzlePlatformsGameInstance_h_15_RPC_WRAPPERS \
  \
 	DECLARE_FUNCTION(execJoin); \
-	DECLARE_FUNCTION(execHost);
+	DECLARE_FUNCTION(execHost); \
+	DECLARE_FUNCTION(execLoadMenu);
 
 
 #define FID_PuzzlePlatforms_Source_PuzzlePlatforms_PuzzlePlatformsGameInstance_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
  \
 	DECLARE_FUNCTION(execJoin); \
-	DECLARE_FUNCTION(execHost);
+	DECLARE_FUNCTION(execHost); \
+	DECLARE_FUNCTION(execLoadMenu);
 
 
 #define FID_PuzzlePlatforms_Source_PuzzlePlatforms_PuzzlePlatformsGameInstance_h_15_INCLASS_NO_PURE_DECLS \
