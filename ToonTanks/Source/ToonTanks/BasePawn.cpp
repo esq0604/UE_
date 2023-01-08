@@ -23,22 +23,8 @@ ABasePawn::ABasePawn()
 	ProjectileSpawnPont->SetupAttachment(TerretMesh);
 }
 
-// Called when the game starts or when spawned
-void ABasePawn::BeginPlay()
-{
-	Super::BeginPlay();
-	
-}
 
-// Called every frame
-void ABasePawn::Tick(float DeltaTime)
-{
-	Super::Tick(DeltaTime);
 
-	FVector DeltaLocation(0.f);
-	DeltaLocation.X = 2.f;
-	AddActorLocalOffset(DeltaLocation);
-}
 
 
 

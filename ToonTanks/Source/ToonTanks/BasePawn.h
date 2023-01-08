@@ -21,9 +21,7 @@ public:
 		int32 VisibleInstanceOnly = 11;
 
 	
-protected:
-	// Called when the game starts or when spawned
-	virtual void BeginPlay() override;
+
 
 private:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly , Category ="Components", meta = (AllowPrivateAccess ="true"))
@@ -40,9 +38,7 @@ private:
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly , meta = (AllowPrivateAccess = "true"))
 		int32 EditAnywhere = 22;
-public:	
-	// Called every frame
-	virtual void Tick(float DeltaTime) override;
+
 
 	// Called to bind functionality to input
 

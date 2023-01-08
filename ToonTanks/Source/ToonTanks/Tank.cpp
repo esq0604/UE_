@@ -5,6 +5,8 @@
 #include "GameFramework/SpringArmComponent.h"
 #include "Camera/CameraComponent.h"
 #include "Components/InputComponent.h"
+#include "Kismet/GameplayStatics.h"
+
 
 ATank::ATank()
 {
@@ -16,11 +18,53 @@ ATank::ATank()
 
 void ATank::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
-	SetupPlayerInputComponent(PlayerInputComponent);
+	Super::SetupPlayerInputComponent(PlayerInputComponent);
 
-	//PlayerInputComponent->BindAxis(TEXT("MoveForward"), this, &Move);
+	PlayerInputComponent->BindAxis(TEXT("MoveForward"), this, &ATank::Move);
+	PlayerInputComponent->BindAxis(TEXT("Turn"), this, &ATank::Turn);
+}
+
+void ATank::Tick(float DeltaTime)
+{
+	Super::Tick(DeltaTime);
+
+	if (PlayerContorller)
+	{
+		FHitResult HitResult;
+		PlayerContorller->GetHitResultUnderCursor(
+			ECollisionChannel::ECC_Visibility,
+			false,
+			HitResult);
+
+		DrawDebugSphere(
+			GetWorld(),
+			HitResult.ImpactPoint,
+			25.f,
+			12,
+			FColor::Red,
+			true,
+			-1.f);
+	}
+}
+
+void ATank::BeginPlay()
+{
+	Super::BeginPlay();
+
+	PlayerContorller = Cast<APlayerController>(GetController());
+	//PlayerContorller->GetHitResultUnderCursor();
 }
 
 void ATank::Move(float Value)
 {
+	FVector DeltaLocation = FVector::ZeroVector;
+	DeltaLocation.X = Value * Speed * UGameplayStatics::GetWorldDeltaSeconds(this);
+	AddActorLocalOffset(DeltaLocation,true);
+}
+
+void ATank::Turn(float Value)
+{
+	FRotator DeltaRotation=FRotator::ZeroRotator;
+	DeltaRotation.Yaw = Value * TurnRate * UGameplayStatics::GetWorldDeltaSeconds(this);
+	AddActorLocalRotation(DeltaRotation,true);
 }
