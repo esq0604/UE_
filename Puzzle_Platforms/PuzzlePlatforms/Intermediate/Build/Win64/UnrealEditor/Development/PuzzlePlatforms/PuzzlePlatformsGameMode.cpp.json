@@ -1,0 +1,27 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\users\\dltkd\\ue_study_udemy\\puzzle_platforms\\puzzleplatforms\\source\\puzzleplatforms\\puzzleplatformsgamemode.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\users\\dltkd\\ue_study_udemy\\puzzle_platforms\\puzzleplatforms\\intermediate\\build\\win64\\puzzleplatformseditor\\development\\engine\\sharedpch.engine.shadowerrors.h.pch",
+        "Includes": [
+            "c:\\users\\dltkd\\ue_study_udemy\\puzzle_platforms\\puzzleplatforms\\intermediate\\build\\win64\\unrealeditor\\development\\puzzleplatforms\\definitions.puzzleplatforms.h",
+            "c:\\users\\dltkd\\ue_study_udemy\\puzzle_platforms\\puzzleplatforms\\source\\puzzleplatforms\\puzzleplatformsgamemode.h",
+            "c:\\users\\dltkd\\ue_5.0\\engine\\source\\runtime\\engine\\classes\\gameframework\\gamemodebase.h",
+            "c:\\users\\dltkd\\ue_5.0\\engine\\source\\runtime\\engine\\classes\\engine\\serverstatreplicator.h",
+            "c:\\users\\dltkd\\ue_5.0\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\serverstatreplicator.generated.h",
+            "c:\\users\\dltkd\\ue_5.0\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\gamemodebase.generated.h",
+            "c:\\users\\dltkd\\ue_study_udemy\\puzzle_platforms\\puzzleplatforms\\intermediate\\build\\win64\\unrealeditor\\inc\\puzzleplatforms\\puzzleplatformsgamemode.generated.h",
+            "c:\\users\\dltkd\\ue_study_udemy\\puzzle_platforms\\puzzleplatforms\\source\\puzzleplatforms\\puzzleplatformscharacter.h",
+            "c:\\users\\dltkd\\ue_5.0\\engine\\source\\runtime\\engine\\classes\\gameframework\\character.h",
+            "c:\\users\\dltkd\\ue_5.0\\engine\\source\\runtime\\engine\\classes\\gameframework\\charactermovementreplication.h",
+            "c:\\users\\dltkd\\ue_5.0\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\charactermovementreplication.generated.h",
+            "c:\\users\\dltkd\\ue_5.0\\engine\\source\\runtime\\engine\\classes\\gameframework\\rootmotionsource.h",
+            "c:\\users\\dltkd\\ue_5.0\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\rootmotionsource.generated.h",
+            "c:\\users\\dltkd\\ue_5.0\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\character.generated.h",
+            "c:\\users\\dltkd\\ue_study_udemy\\puzzle_platforms\\puzzleplatforms\\intermediate\\build\\win64\\unrealeditor\\inc\\puzzleplatforms\\puzzleplatformscharacter.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

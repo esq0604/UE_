@@ -25,6 +25,13 @@ ABasePawn::ABasePawn()
 
 
 
+<<<<<<< HEAD
+=======
+	//FVector DeltaLocation(0.f);
+	//DeltaLocation.X = 2.f;
+	//AddActorLocalOffset(DeltaLocation);
+}
+>>>>>>> main
 
 
 

@@ -19,6 +19,7 @@ ATank::ATank()
 void ATank::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
+<<<<<<< HEAD
 
 	PlayerInputComponent->BindAxis(TEXT("MoveForward"), this, &ATank::Move);
 	PlayerInputComponent->BindAxis(TEXT("Turn"), this, &ATank::Turn);
@@ -53,18 +54,41 @@ void ATank::BeginPlay()
 
 	PlayerContorller = Cast<APlayerController>(GetController());
 	//PlayerContorller->GetHitResultUnderCursor();
+=======
+
+	PlayerInputComponent->BindAxis(TEXT("MoveForward"), this, &ATank::Move);
+	PlayerInputComponent->BindAxis(TEXT("Turn"), this, &ATank::Turn);
+}
+
+void ATank::BeginPlay()
+{
+	Super::BeginPlay();
+>>>>>>> main
 }
 
 void ATank::Move(float Value)
 {
+<<<<<<< HEAD
 	FVector DeltaLocation = FVector::ZeroVector;
 	DeltaLocation.X = Value * Speed * UGameplayStatics::GetWorldDeltaSeconds(this);
 	AddActorLocalOffset(DeltaLocation,true);
+=======
+	
+	FVector DeltaVector = FVector::ZeroVector;
+	DeltaVector.X = Value*Speed* UGameplayStatics::GetWorldDeltaSeconds(this);
+	AddActorLocalOffset(DeltaVector);
+>>>>>>> main
 }
 
 void ATank::Turn(float Value)
 {
+<<<<<<< HEAD
 	FRotator DeltaRotation=FRotator::ZeroRotator;
 	DeltaRotation.Yaw = Value * TurnRate * UGameplayStatics::GetWorldDeltaSeconds(this);
 	AddActorLocalRotation(DeltaRotation,true);
+=======
+	FRotator DeltaRotate = FRotator::ZeroRotator;
+	DeltaRotate.Yaw = Value * TrunRate * UGameplayStatics::GetWorldDeltaSeconds(this);
+	AddActorLocalRotation(DeltaRotate,true); 
+>>>>>>> main
 }

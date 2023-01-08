@@ -2,6 +2,10 @@
 	"BuildId": "19505902",
 	"Modules": 
 	{
+<<<<<<< HEAD
 		"ToonTanks": "UnrealEditor-ToonTanks-2889.dll"
+=======
+		"ToonTanks": "UnrealEditor-ToonTanks-3555.dll"
+>>>>>>> main
 	}
 }
